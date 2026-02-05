@@ -180,7 +180,7 @@ const Hero = () => {
               className="flex gap-4 mt-8 justify-center lg:justify-start"
             >
               {[
-                { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
+                { icon: Linkedin, href: 'https://www.linkedin.com/in/himel-hossain-501868154/', label: 'LinkedIn' },
                 { icon: Facebook, href: 'https://www.facebook.com/himelhossain111', label: 'Facebook' },
                 { icon: Github, href: 'https://github.com', label: 'GitHub' },
                 { icon: PinterestIcon, href: 'https://www.pinterest.com/himelhossain111/', label: 'Pinterest' },
