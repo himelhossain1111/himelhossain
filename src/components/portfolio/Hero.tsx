@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowDown, Mail, Download, Linkedin, Facebook, Github, Terminal, Code2 } from 'lucide-react';
+import PinterestIcon from './PinterestIcon';
 import TypewriterEffect from './TypewriterEffect';
 import ParticleField from './ParticleField';
 import GlitchText from './GlitchText';
@@ -182,6 +183,7 @@ const Hero = () => {
                 { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
                 { icon: Facebook, href: 'https://www.facebook.com/himelhossain111', label: 'Facebook' },
                 { icon: Github, href: 'https://github.com', label: 'GitHub' },
+                { icon: PinterestIcon, href: 'https://www.pinterest.com/himelhossain111/', label: 'Pinterest' },
               ].map((social, index) => (
                 <motion.a 
                   key={social.label}
