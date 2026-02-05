@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Heart, Linkedin, Facebook, Mail, ArrowUp, Github } from 'lucide-react';
+import PinterestIcon from './PinterestIcon';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -13,6 +14,7 @@ const Footer = () => {
     { icon: Linkedin, href: 'https://www.linkedin.com/in/himel-hossain-501868154/', label: 'LinkedIn' },
     { icon: Facebook, href: 'https://www.facebook.com/himelhossain111', label: 'Facebook' },
     { icon: Github, href: 'https://github.com', label: 'GitHub' },
+    { icon: PinterestIcon, href: 'https://www.pinterest.com/himelhossain111/', label: 'Pinterest' },
   ];
 
   const quickLinks = [

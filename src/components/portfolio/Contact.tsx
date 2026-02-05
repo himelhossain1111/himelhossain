@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { Mail, Phone, MapPin, Send, Linkedin, Facebook, CheckCircle2, Loader2, Sparkles, Github } from 'lucide-react';
+import PinterestIcon from './PinterestIcon';
 
 const Contact = () => {
   const ref = useRef(null);
@@ -27,6 +28,7 @@ const Contact = () => {
     { icon: Linkedin, href: 'https://www.linkedin.com/in/himel-hossain-501868154/', label: 'LinkedIn' },
     { icon: Facebook, href: 'https://www.facebook.com/himelhossain111', label: 'Facebook' },
     { icon: Github, href: 'https://github.com', label: 'GitHub' },
+    { icon: PinterestIcon, href: 'https://www.pinterest.com/himelhossain111/', label: 'Pinterest' },
   ];
 
   return (
