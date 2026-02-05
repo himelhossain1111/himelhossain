@@ -10,7 +10,7 @@ const Footer = () => {
 
   const socialLinks = [
     { icon: Mail, href: 'mailto:himelhossain111@gmail.com', label: 'Email' },
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/himel-hossain-501868154/', label: 'LinkedIn' },
     { icon: Facebook, href: 'https://www.facebook.com/himelhossain11', label: 'Facebook' },
     { icon: Github, href: 'https://github.com', label: 'GitHub' },
   ];
