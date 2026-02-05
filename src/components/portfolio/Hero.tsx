@@ -180,7 +180,7 @@ const Hero = () => {
             >
               {[
                 { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-                { icon: Facebook, href: 'https://facebook.com', label: 'Facebook' },
+                { icon: Facebook, href: 'https://www.facebook.com/himelhossain11', label: 'Facebook' },
                 { icon: Github, href: 'https://github.com', label: 'GitHub' },
               ].map((social, index) => (
                 <motion.a 
