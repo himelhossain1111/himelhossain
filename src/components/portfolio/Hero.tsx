@@ -122,9 +122,9 @@ const Hero = () => {
               className="flex flex-wrap justify-center lg:justify-start gap-6 mb-8"
             >
               {[
-                { value: '5+', label: 'Years Exp.' },
-                { value: '50+', label: 'Team Size' },
-                { value: '99.5%', label: 'Accuracy' },
+                { value: '8+', label: 'Years Exp.' },
+                { value: '10+', label: 'Team Experience' },
+                { value: '90%', label: 'Accuracy' },
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
@@ -262,7 +262,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.1 }}
               >
                 <div className="text-xs text-muted-foreground">Experience</div>
-                <div className="text-lg font-bold gradient-text">5+ Years</div>
+                <div className="text-lg font-bold gradient-text">8+ Years</div>
               </motion.div>
               
               <motion.div
@@ -272,8 +272,8 @@ const Hero = () => {
                 transition={{ delay: 1.4 }}
                 whileHover={{ scale: 1.1 }}
               >
-                <div className="text-xs text-muted-foreground">Team Led</div>
-                <div className="text-lg font-bold gradient-text">50+ People</div>
+                <div className="text-xs text-muted-foreground">Team Experience</div>
+                <div className="text-lg font-bold gradient-text">10+</div>
               </motion.div>
             </div>
           </motion.div>

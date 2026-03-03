@@ -91,7 +91,7 @@ const About = () => {
                   <p className="text-muted-foreground leading-relaxed mb-4">
                     An energetic, dynamic, and self-motivated professional seeking challenging opportunities 
                     where I can utilize my adaptability and skills to innovate and grow. With over 
-                    <span className="text-primary font-semibold"> 7 years of experience</span> in store management, 
+                    <span className="text-primary font-semibold"> 8 years of experience</span> in store management, 
                     I excel at managing complex operations under pressure.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
