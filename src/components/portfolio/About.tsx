@@ -12,9 +12,9 @@ const infoItems = [
 ];
 
 const stats = [
-  { icon: Award, value: '7+', label: 'Years Experience', color: 'from-primary to-[hsl(190,70%,55%)]' },
-  { icon: User, value: '100+', label: 'Projects Handled', color: 'from-[hsl(190,70%,55%)] to-[hsl(200,80%,50%)]' },
-  { icon: Target, value: '50+', label: 'Team Members Led', color: 'from-[hsl(200,80%,50%)] to-glow-purple' },
+  { icon: Award, value: '8+', label: 'Years Experience', color: 'from-primary to-[hsl(190,70%,55%)]' },
+  { icon: User, value: '10+', label: 'Team Experience', color: 'from-[hsl(190,70%,55%)] to-[hsl(200,80%,50%)]' },
+  { icon: Target, value: '90%', label: 'Accuracy', color: 'from-[hsl(200,80%,50%)] to-glow-purple' },
 ];
 
 const About = () => {
