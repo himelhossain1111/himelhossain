@@ -43,7 +43,7 @@ const Experience = () => {
   const isInView = useInView(ref, { once: true, margin: '-50px' });
 
   return (
-    <section id="experience" className="py-32 relative overflow-hidden bg-card/30">
+    <section id="experience" className="py-16 sm:py-24 lg:py-32 relative overflow-hidden bg-card/30">
       {/* Background */}
       <div className="absolute inset-0 tech-grid opacity-20" />
       <motion.div 
