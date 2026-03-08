@@ -1,10 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { Quote, ChevronLeft, ChevronRight, Star } from 'lucide-react';
-import rashidulImg from '@/assets/testimonial-rashidul.jpg';
-import nashimImg from '@/assets/testimonial-nashim.jpg';
-import farhanaImg from '@/assets/testimonial-farhana.jpg';
-import heroImg from '@/assets/testimonial-hero.jpg';
 
 const testimonials = [
   {
@@ -172,14 +168,12 @@ const Testimonials = () => {
                 {/* Author */}
                 <div className="flex items-center gap-4">
                   <motion.div
-                    className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-[hsl(200,80%,50%)] p-0.5"
+                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-[hsl(200,80%,50%)] p-0.5"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                   >
-                    <img
-                      src={t.image}
-                      alt={t.name}
-                      className="w-full h-full rounded-xl object-cover"
-                    />
+                    <div className="w-full h-full rounded-xl bg-card flex items-center justify-center text-primary font-bold text-lg">
+                      {t.name.charAt(0)}
+                    </div>
                   </motion.div>
                   <div>
                     <h4 className="font-heading font-bold text-foreground">{t.name}</h4>
