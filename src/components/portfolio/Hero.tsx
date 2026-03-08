@@ -14,6 +14,8 @@ const Hero = () => {
     'ERP Systems Specialist',
     'Team Leader',
   ];
+  
+  const titleColor = useMemo(() => useRandomTitleColor('hero'), []);
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 sm:px-0">
