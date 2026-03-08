@@ -83,8 +83,8 @@ const AIChatDialog = ({ open, onClose }: Props) => {
     }
   }, [messages]);
 
-  const send = async () => {
-    const text = input.trim();
+  const send = async (override?: string) => {
+    const text = (override ?? input).trim();
     if (!text || loading) return;
     setInput('');
     setError('');
