@@ -55,7 +55,7 @@ const Skills = () => {
             &lt;Skills /&gt;
           </motion.span>
           <h2 className="section-heading">
-            My <span className="gradient-text neon-text">Expertise</span>
+            My <span style={{ color: titleColor }}>Expertise</span>
           </h2>
           <p className="section-subheading">Technical proficiency and professional competencies</p>
         </motion.div>
