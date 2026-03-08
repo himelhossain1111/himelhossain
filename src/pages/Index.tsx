@@ -37,8 +37,6 @@ const Index = () => {
       <SectionTransition />
       <References />
       <SectionTransition />
-      <Testimonials />
-      <SectionTransition />
       <Contact />
       <Footer />
       <AIChatButton />
