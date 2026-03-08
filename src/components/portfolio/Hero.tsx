@@ -236,7 +236,7 @@ const Hero = () => {
               
               {/* Image container with hexagon-ish frame */}
               <motion.div 
-                className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden"
+                className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden"
                 style={{
                   boxShadow: '0 0 60px hsl(174 72% 56% / 0.4), inset 0 0 60px hsl(174 72% 56% / 0.1)',
                   border: '3px solid hsl(174 72% 56% / 0.5)',
