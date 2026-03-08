@@ -37,7 +37,7 @@ const About = () => {
   return (
     <section id="about" className="py-16 sm:py-24 lg:py-32 relative overflow-hidden">
       {/* Background elements */}
-      <div className="absolute inset-0 tech-grid opacity-20" />
+      <div className="absolute inset-0 tech-grid opacity-10" />
       <motion.div 
         className="absolute top-1/2 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-[100px]"
         animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}

@@ -49,7 +49,7 @@ const Projects = () => {
   return (
     <section id="projects" className="py-16 sm:py-24 lg:py-32 relative overflow-hidden bg-card/30">
       {/* Background */}
-      <div className="absolute inset-0 tech-grid opacity-20" />
+      <div className="absolute inset-0 tech-grid opacity-10" />
       <motion.div 
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[150px]"
         animate={{ scale: [1, 1.3, 1], rotate: [0, 180, 360] }}

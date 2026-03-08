@@ -19,28 +19,28 @@ const Hero = () => {
       <ParticleField />
       
       {/* Tech Grid Overlay */}
-      <div className="absolute inset-0 tech-grid opacity-30" />
+      <div className="absolute inset-0 tech-grid opacity-15" />
       
       {/* Animated gradient orbs */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div 
-          className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px]"
+          className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/12 rounded-full blur-[120px]"
           animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
+            scale: [1, 1.15, 1],
+            opacity: [0.2, 0.35, 0.2],
           }}
           transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
         />
         <motion.div 
-          className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-glow-purple/20 rounded-full blur-[100px]"
+          className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-glow-purple/12 rounded-full blur-[120px]"
           animate={{
             scale: [1.2, 1, 1.2],
-            opacity: [0.4, 0.2, 0.4],
+            opacity: [0.25, 0.15, 0.25],
           }}
           transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
         />
         <motion.div 
-          className="absolute top-1/2 right-1/3 w-[300px] h-[300px] bg-[hsl(200,80%,50%)]/15 rounded-full blur-[80px]"
+          className="absolute top-1/2 right-1/3 w-[300px] h-[300px] bg-[hsl(200,80%,50%)]/8 rounded-full blur-[100px]"
           animate={{
             x: [0, 50, 0],
             y: [0, -30, 0],

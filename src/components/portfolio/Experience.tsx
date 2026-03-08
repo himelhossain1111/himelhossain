@@ -45,7 +45,7 @@ const Experience = () => {
   return (
     <section id="experience" className="py-16 sm:py-24 lg:py-32 relative overflow-hidden bg-card/30">
       {/* Background */}
-      <div className="absolute inset-0 tech-grid opacity-20" />
+      <div className="absolute inset-0 tech-grid opacity-10" />
       <motion.div 
         className="absolute -left-40 top-1/3 w-96 h-96 bg-glow-purple/10 rounded-full blur-[120px]"
         animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.4, 0.2] }}
