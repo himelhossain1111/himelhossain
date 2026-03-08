@@ -42,6 +42,7 @@ const education = [
 const Experience = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
+  const titleColor = useMemo(() => useRandomTitleColor('experience'), []);
 
   return (
     <section id="experience" className="py-16 sm:py-24 lg:py-32 relative overflow-hidden bg-card/30">
