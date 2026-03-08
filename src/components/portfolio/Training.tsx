@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useMemo } from 'react';
 import { BookOpen, Calendar, Award } from 'lucide-react';
+import { useRandomTitleColor } from '@/lib/randomColor';
 
 const trainings = [
   {
