@@ -162,7 +162,8 @@ const Hero = () => {
                 </motion.span>
               </motion.a>
               <motion.a 
-                href="https://himelhossain111.github.io/Himel-Hossain-Portfolio1/#" 
+                href="/Himels_CV.pdf" 
+                download="Himel_Hossain_CV.pdf"
                 className="btn-outline flex items-center justify-center gap-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
