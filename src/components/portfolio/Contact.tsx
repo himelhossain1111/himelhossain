@@ -41,7 +41,7 @@ const Contact = () => {
         transition={{ duration: 10, repeat: Infinity }}
       />
 
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}

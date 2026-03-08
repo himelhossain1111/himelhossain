@@ -267,14 +267,14 @@ const Hero = () => {
               </motion.div>
               
               <motion.div
-                className="absolute -left-4 bottom-1/4 px-4 py-2 rounded-lg bg-card border border-border shadow-xl"
+                className="absolute -left-2 sm:-left-4 bottom-1/4 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-card border border-border shadow-xl"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 1.4 }}
                 whileHover={{ scale: 1.1 }}
               >
-                <div className="text-xs text-muted-foreground">Team Experience</div>
-                <div className="text-lg font-bold text-white">10+</div>
+                <div className="text-[10px] sm:text-xs text-muted-foreground">Team Experience</div>
+                <div className="text-sm sm:text-lg font-bold text-foreground">10+</div>
               </motion.div>
             </div>
           </motion.div>

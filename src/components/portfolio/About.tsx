@@ -44,7 +44,7 @@ const About = () => {
         transition={{ duration: 8, repeat: Infinity }}
       />
 
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           ref={ref}
           variants={containerVariants}
