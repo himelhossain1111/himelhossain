@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useMemo } from 'react';
 import { 
   Brain, FileSpreadsheet, Mail, Database, Package, 
   Users, Clock, MessageSquare, Lightbulb, Target, Zap, Globe
 } from 'lucide-react';
+import { useRandomTitleColor } from '@/lib/randomColor';
 
 const technicalSkills = [
   { name: 'AI Prompt Engineering', level: 85, icon: Brain, description: 'ChatGPT, Claude, Automation' },
@@ -27,6 +28,7 @@ const softSkills = [
 const Skills = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
+  const titleColor = useMemo(() => useRandomTitleColor('skills'), []);
 
   return (
     <section id="skills" className="py-16 sm:py-24 lg:py-32 relative overflow-hidden">
@@ -53,7 +55,7 @@ const Skills = () => {
             &lt;Skills /&gt;
           </motion.span>
           <h2 className="section-heading">
-            My <span className="gradient-text neon-text">Expertise</span>
+            My <span style={{ color: titleColor }}>Expertise</span>
           </h2>
           <p className="section-subheading">Technical proficiency and professional competencies</p>
         </motion.div>

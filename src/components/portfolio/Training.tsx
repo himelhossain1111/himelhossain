@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useMemo } from 'react';
 import { BookOpen, Calendar, Award } from 'lucide-react';
+import { useRandomTitleColor } from '@/lib/randomColor';
 
 const trainings = [
   {
@@ -30,6 +31,7 @@ const trainings = [
 const Training = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
+  const titleColor = useMemo(() => useRandomTitleColor('training'), []);
 
   return (
     <section id="training" className="py-16 sm:py-24 lg:py-32 relative overflow-hidden">
@@ -55,7 +57,7 @@ const Training = () => {
             &lt;Training /&gt;
           </motion.span>
           <h2 className="section-heading">
-            Training <span className="gradient-text neon-text">Summary</span>
+            Training <span style={{ color: titleColor }}>Summary</span>
           </h2>
           <p className="section-subheading">Professional development and certifications</p>
         </motion.div>

@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useMemo } from 'react';
 import { Mail, Phone, MapPin, Calendar, Droplet, User, Target, Award, Sparkles } from 'lucide-react';
+import { useRandomTitleColor } from '@/lib/randomColor';
 
 const infoItems = [
   { icon: Mail, label: 'Email', value: 'himelhossain111@gmail.com' },
@@ -20,6 +21,7 @@ const stats = [
 const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
+  const titleColor = useMemo(() => useRandomTitleColor('about'), []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -60,7 +62,7 @@ const About = () => {
               &lt;About Me /&gt;
             </motion.span>
             <h2 className="section-heading">
-              Discover My <span className="gradient-text neon-text">Story</span>
+              Discover My <span style={{ color: titleColor }}>Story</span>
             </h2>
             <p className="section-subheading max-w-2xl mx-auto">Get to know me better</p>
           </motion.div>

@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useMemo } from 'react';
 import { Briefcase, GraduationCap, Calendar, ChevronRight } from 'lucide-react';
+import { useRandomTitleColor } from '@/lib/randomColor';
 
 const workExperience = [
   {
@@ -41,6 +42,7 @@ const education = [
 const Experience = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
+  const titleColor = useMemo(() => useRandomTitleColor('experience'), []);
 
   return (
     <section id="experience" className="py-16 sm:py-24 lg:py-32 relative overflow-hidden bg-card/30">
@@ -67,7 +69,7 @@ const Experience = () => {
             &lt;Experience /&gt;
           </motion.span>
           <h2 className="section-heading">
-            Experience & <span className="gradient-text neon-text">Education</span>
+            Experience & <span style={{ color: titleColor }}>Education</span>
           </h2>
           <p className="section-subheading">My professional journey and academic background</p>
         </motion.div>

@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
 import { ArrowDown, Mail, Download, Linkedin, Facebook, Github, Terminal, Code2 } from 'lucide-react';
+import { useMemo } from 'react';
 import PinterestIcon from './PinterestIcon';
 import TypewriterEffect from './TypewriterEffect';
 import ParticleField from './ParticleField';
 import GlitchText from './GlitchText';
+import { useRandomTitleColor } from '@/lib/randomColor';
 
 const Hero = () => {
   const roles = [
@@ -12,6 +14,8 @@ const Hero = () => {
     'ERP Systems Specialist',
     'Team Leader',
   ];
+  
+  const titleColor = useMemo(() => useRandomTitleColor('hero'), []);
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 sm:px-0">
@@ -102,7 +106,7 @@ const Hero = () => {
             >
               <GlitchText text="Md. Himel" className="gradient-text" />
               <br />
-              <span className="text-foreground">Hossain</span>
+              <span style={{ color: titleColor }}>Hossain</span>
             </motion.h1>
 
             <motion.div

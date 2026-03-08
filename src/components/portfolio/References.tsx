@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useMemo } from 'react';
 import { Phone, UserCheck, Quote } from 'lucide-react';
+import { useRandomTitleColor } from '@/lib/randomColor';
 
 const references = [
   {
@@ -21,6 +22,7 @@ const references = [
 const References = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
+  const titleColor = useMemo(() => useRandomTitleColor('references'), []);
 
   return (
     <section id="references" className="py-16 sm:py-24 lg:py-32 relative overflow-hidden bg-card/30">
@@ -46,7 +48,7 @@ const References = () => {
             &lt;References /&gt;
           </motion.span>
           <h2 className="section-heading">
-            Professional <span className="gradient-text neon-text">References</span>
+            Professional <span style={{ color: titleColor }}>References</span>
           </h2>
           <p className="section-subheading">People who can vouch for my work and character</p>
         </motion.div>

@@ -1,14 +1,16 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useRef, useState, useMemo } from 'react';
 import { Mail, Phone, MapPin, Send, Linkedin, Facebook, CheckCircle2, Loader2, Sparkles, Github } from 'lucide-react';
 import PinterestIcon from './PinterestIcon';
+import { useRandomTitleColor } from '@/lib/randomColor';
 
 const Contact = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const titleColor = useMemo(() => useRandomTitleColor('contact'), []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -56,7 +58,7 @@ const Contact = () => {
             &lt;Contact /&gt;
           </motion.span>
           <h2 className="section-heading">
-            Get In <span className="gradient-text neon-text">Touch</span>
+            Get In <span style={{ color: titleColor }}>Touch</span>
           </h2>
           <p className="section-subheading">Feel free to reach out for opportunities or collaborations</p>
         </motion.div>
