@@ -11,7 +11,7 @@ const AIChatButton = () => {
       <AIChatDialog open={open} onClose={() => setOpen(false)} />
       <motion.button
         onClick={() => setOpen(!open)}
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-primary text-primary-foreground shadow-lg hover:shadow-primary/40 hover:shadow-xl flex items-center justify-center transition-shadow"
+        className="fixed bottom-24 right-6 z-50 w-14 h-14 rounded-full bg-primary text-primary-foreground shadow-lg hover:shadow-primary/40 hover:shadow-xl flex items-center justify-center transition-shadow"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         initial={{ scale: 0 }}
