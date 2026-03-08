@@ -28,6 +28,7 @@ const softSkills = [
 const Skills = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
+  const titleColor = useMemo(() => useRandomTitleColor('skills'), []);
 
   return (
     <section id="skills" className="py-16 sm:py-24 lg:py-32 relative overflow-hidden">
