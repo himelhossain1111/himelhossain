@@ -69,7 +69,7 @@ const Experience = () => {
             &lt;Experience /&gt;
           </motion.span>
           <h2 className="section-heading">
-            Experience & <span className="gradient-text neon-text">Education</span>
+            Experience & <span style={{ color: titleColor }}>Education</span>
           </h2>
           <p className="section-subheading">My professional journey and academic background</p>
         </motion.div>

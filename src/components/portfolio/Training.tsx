@@ -31,6 +31,7 @@ const trainings = [
 const Training = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
+  const titleColor = useMemo(() => useRandomTitleColor('training'), []);
 
   return (
     <section id="training" className="py-16 sm:py-24 lg:py-32 relative overflow-hidden">

@@ -62,7 +62,7 @@ const About = () => {
               &lt;About Me /&gt;
             </motion.span>
             <h2 className="section-heading">
-              Discover My <span className="gradient-text neon-text">Story</span>
+              Discover My <span style={{ color: titleColor }}>Story</span>
             </h2>
             <p className="section-subheading max-w-2xl mx-auto">Get to know me better</p>
           </motion.div>
