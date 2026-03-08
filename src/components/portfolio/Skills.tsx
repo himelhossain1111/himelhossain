@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useMemo } from 'react';
 import { 
   Brain, FileSpreadsheet, Mail, Database, Package, 
   Users, Clock, MessageSquare, Lightbulb, Target, Zap, Globe
 } from 'lucide-react';
+import { useRandomTitleColor } from '@/lib/randomColor';
 
 const technicalSkills = [
   { name: 'AI Prompt Engineering', level: 85, icon: Brain, description: 'ChatGPT, Claude, Automation' },
