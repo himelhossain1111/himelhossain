@@ -36,6 +36,8 @@ const Index = () => {
       <SectionTransition />
       <Contact />
       <Footer />
+      <AIChatButton />
+    </div>
     </div>
   );
 };
