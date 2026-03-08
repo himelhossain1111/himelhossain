@@ -16,7 +16,6 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
-  const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
