@@ -48,7 +48,7 @@ const References = () => {
             &lt;References /&gt;
           </motion.span>
           <h2 className="section-heading">
-            Professional <span className="gradient-text neon-text">References</span>
+            Professional <span style={{ color: titleColor }}>References</span>
           </h2>
           <p className="section-subheading">People who can vouch for my work and character</p>
         </motion.div>

@@ -73,7 +73,7 @@ const Projects = () => {
             &lt;Achievements /&gt;
           </motion.span>
           <h2 className="section-heading">
-            Key <span className="gradient-text neon-text">Achievements</span>
+            Key <span style={{ color: titleColor }}>Achievements</span>
           </h2>
           <p className="section-subheading">Highlights and impact from my professional journey</p>
         </motion.div>
