@@ -172,12 +172,14 @@ const Testimonials = () => {
                 {/* Author */}
                 <div className="flex items-center gap-4">
                   <motion.div
-                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-[hsl(200,80%,50%)] p-0.5"
+                    className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-[hsl(200,80%,50%)] p-0.5"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                   >
-                    <div className="w-full h-full rounded-xl bg-card flex items-center justify-center text-primary font-bold text-lg">
-                      {t.name.charAt(0)}
-                    </div>
+                    <img
+                      src={t.image}
+                      alt={t.name}
+                      className="w-full h-full rounded-xl object-cover"
+                    />
                   </motion.div>
                   <div>
                     <h4 className="font-heading font-bold text-foreground">{t.name}</h4>
