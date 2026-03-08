@@ -78,27 +78,6 @@ const Navbar = () => {
                 )}
               </motion.a>
             ))}
-
-            {/* Theme Toggle */}
-            <motion.button
-              onClick={toggleTheme}
-              className="ml-2 w-10 h-10 rounded-xl bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              aria-label="Toggle theme"
-            >
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={isDark ? 'dark' : 'light'}
-                  initial={{ rotate: -90, opacity: 0 }}
-                  animate={{ rotate: 0, opacity: 1 }}
-                  exit={{ rotate: 90, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  {isDark ? <Sun size={18} /> : <Moon size={18} />}
-                </motion.div>
-              </AnimatePresence>
-            </motion.button>
           </div>
 
           {/* Mobile Menu Button */}
