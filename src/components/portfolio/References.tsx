@@ -24,7 +24,7 @@ const References = () => {
 
   return (
     <section id="references" className="py-16 sm:py-24 lg:py-32 relative overflow-hidden bg-card/30">
-      <div className="absolute inset-0 tech-grid opacity-20" />
+      <div className="absolute inset-0 tech-grid opacity-10" />
       <motion.div
         className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[120px]"
         animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.4, 0.2] }}

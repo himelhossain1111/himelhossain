@@ -34,7 +34,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-16 sm:py-24 lg:py-32 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 tech-grid opacity-20" />
+      <div className="absolute inset-0 tech-grid opacity-10" />
       <motion.div 
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/10 rounded-full blur-[150px]"
         animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.4, 0.2] }}

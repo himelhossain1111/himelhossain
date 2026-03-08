@@ -31,7 +31,7 @@ const Footer = () => {
     <footer className="relative pt-20 pb-8 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-card/80" />
-      <div className="absolute inset-0 tech-grid opacity-10" />
+      <div className="absolute inset-0 tech-grid opacity-5" />
       <motion.div 
         className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-primary/10 rounded-full blur-[100px]"
       />

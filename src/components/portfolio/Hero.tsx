@@ -40,7 +40,7 @@ const Hero = () => {
           transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
         />
         <motion.div 
-          className="absolute top-1/2 right-1/3 w-[300px] h-[300px] bg-[hsl(200,80%,50%)]/15 rounded-full blur-[80px]"
+          className="absolute top-1/2 right-1/3 w-[300px] h-[300px] bg-[hsl(200,80%,50%)]/8 rounded-full blur-[100px]"
           animate={{
             x: [0, 50, 0],
             y: [0, -30, 0],

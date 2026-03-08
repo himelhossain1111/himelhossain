@@ -33,7 +33,7 @@ const Training = () => {
 
   return (
     <section id="training" className="py-16 sm:py-24 lg:py-32 relative overflow-hidden">
-      <div className="absolute inset-0 tech-grid opacity-20" />
+      <div className="absolute inset-0 tech-grid opacity-10" />
       <motion.div
         className="absolute top-1/3 right-0 w-[400px] h-[400px] bg-glow-purple/10 rounded-full blur-[120px]"
         animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.4, 0.2] }}
