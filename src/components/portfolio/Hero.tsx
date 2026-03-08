@@ -65,7 +65,7 @@ const Hero = () => {
         <Code2 size={50} />
       </motion.div>
 
-      <div className="container mx-auto px-6 pt-20 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 pt-20 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Text Content */}
           <motion.div
