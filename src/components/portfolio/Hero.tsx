@@ -19,7 +19,7 @@ const Hero = () => {
       <ParticleField />
       
       {/* Tech Grid Overlay */}
-      <div className="absolute inset-0 tech-grid opacity-30" />
+      <div className="absolute inset-0 tech-grid opacity-15" />
       
       {/* Animated gradient orbs */}
       <div className="absolute inset-0 overflow-hidden">
