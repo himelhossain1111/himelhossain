@@ -32,10 +32,10 @@ const Hero = () => {
           transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
         />
         <motion.div 
-          className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-glow-purple/20 rounded-full blur-[100px]"
+          className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-glow-purple/12 rounded-full blur-[120px]"
           animate={{
             scale: [1.2, 1, 1.2],
-            opacity: [0.4, 0.2, 0.4],
+            opacity: [0.25, 0.15, 0.25],
           }}
           transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
         />
