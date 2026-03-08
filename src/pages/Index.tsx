@@ -12,6 +12,7 @@ import Footer from '@/components/portfolio/Footer';
 import SplashScreen from '@/components/portfolio/SplashScreen';
 import SectionTransition from '@/components/portfolio/SectionTransition';
 import AIChatButton from '@/components/portfolio/AIChatButton';
+import WhatsAppButton from '@/components/portfolio/WhatsAppButton';
 
 const Index = () => {
   const [showSplash, setShowSplash] = useState(true);
@@ -37,6 +38,7 @@ const Index = () => {
       <Contact />
       <Footer />
       <AIChatButton />
+      <WhatsAppButton />
     </div>
   );
 };
