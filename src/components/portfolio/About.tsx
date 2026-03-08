@@ -21,6 +21,7 @@ const stats = [
 const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
+  const titleColor = useMemo(() => useRandomTitleColor('about'), []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
