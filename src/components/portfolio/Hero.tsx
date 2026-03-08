@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
 import { ArrowDown, Mail, Download, Linkedin, Facebook, Github, Terminal, Code2 } from 'lucide-react';
+import { useMemo } from 'react';
 import PinterestIcon from './PinterestIcon';
 import TypewriterEffect from './TypewriterEffect';
 import ParticleField from './ParticleField';
 import GlitchText from './GlitchText';
+import { useRandomTitleColor } from '@/lib/randomColor';
 
 const Hero = () => {
   const roles = [
