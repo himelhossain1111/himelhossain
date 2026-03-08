@@ -80,16 +80,8 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center gap-2">
-            <motion.button
-              onClick={toggleTheme}
-              className="w-10 h-10 rounded-xl bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-primary transition-all"
-              whileTap={{ scale: 0.9 }}
-              aria-label="Toggle theme"
-            >
-              {isDark ? <Sun size={18} /> : <Moon size={18} />}
-            </motion.button>
+           {/* Mobile Menu Button */}
+          <div className="md:hidden">
             <motion.button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="w-10 h-10 rounded-xl bg-card border border-border flex items-center justify-center text-foreground"
