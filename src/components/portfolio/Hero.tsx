@@ -98,7 +98,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold mb-4"
+              className="font-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4"
             >
               <GlitchText text="Md. Himel" className="gradient-text" />
               <br />
