@@ -58,7 +58,7 @@ const Contact = () => {
             &lt;Contact /&gt;
           </motion.span>
           <h2 className="section-heading">
-            Get In <span className="gradient-text neon-text">Touch</span>
+            Get In <span style={{ color: titleColor }}>Touch</span>
           </h2>
           <p className="section-subheading">Feel free to reach out for opportunities or collaborations</p>
         </motion.div>
