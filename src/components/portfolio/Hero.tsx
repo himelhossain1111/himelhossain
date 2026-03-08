@@ -274,7 +274,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.1 }}
               >
                 <div className="text-xs text-muted-foreground">Team Experience</div>
-                <div className="text-lg font-bold gradient-text">10+</div>
+                <div className="text-lg font-bold text-white">10+</div>
               </motion.div>
             </div>
           </motion.div>
