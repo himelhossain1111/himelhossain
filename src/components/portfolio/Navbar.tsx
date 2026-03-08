@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 
 const navItems = [
   { label: 'About', href: '#about' },
@@ -16,12 +16,12 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
+  const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
 
-      // Active section detection
       const sections = navItems.map(item => item.href.replace('#', ''));
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i]);
@@ -34,6 +34,12 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const toggleTheme = () => {
+    const newIsDark = !isDark;
+    setIsDark(newIsDark);
+    document.documentElement.classList.toggle('light', !newIsDark);
+  };
 
   return (
     <motion.nav
@@ -79,16 +85,47 @@ const Navbar = () => {
                 )}
               </motion.a>
             ))}
+
+            {/* Theme Toggle */}
+            <motion.button
+              onClick={toggleTheme}
+              className="ml-2 w-10 h-10 rounded-xl bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              aria-label="Toggle theme"
+            >
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={isDark ? 'dark' : 'light'}
+                  initial={{ rotate: -90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: 90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {isDark ? <Sun size={18} /> : <Moon size={18} />}
+                </motion.div>
+              </AnimatePresence>
+            </motion.button>
           </div>
 
           {/* Mobile Menu Button */}
-          <motion.button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden w-10 h-10 rounded-xl bg-card border border-border flex items-center justify-center text-foreground"
-            whileTap={{ scale: 0.9 }}
-          >
-            {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-          </motion.button>
+          <div className="md:hidden flex items-center gap-2">
+            <motion.button
+              onClick={toggleTheme}
+              className="w-10 h-10 rounded-xl bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-primary transition-all"
+              whileTap={{ scale: 0.9 }}
+              aria-label="Toggle theme"
+            >
+              {isDark ? <Sun size={18} /> : <Moon size={18} />}
+            </motion.button>
+            <motion.button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="w-10 h-10 rounded-xl bg-card border border-border flex items-center justify-center text-foreground"
+              whileTap={{ scale: 0.9 }}
+            >
+              {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            </motion.button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
