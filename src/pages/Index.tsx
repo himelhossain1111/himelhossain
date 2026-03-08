@@ -38,7 +38,6 @@ const Index = () => {
       <Footer />
       <AIChatButton />
     </div>
-    </div>
   );
 };
 
