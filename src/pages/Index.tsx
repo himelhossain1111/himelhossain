@@ -10,6 +10,7 @@ import References from '@/components/portfolio/References';
 import Contact from '@/components/portfolio/Contact';
 import Footer from '@/components/portfolio/Footer';
 import SplashScreen from '@/components/portfolio/SplashScreen';
+import SectionTransition from '@/components/portfolio/SectionTransition';
 
 const Index = () => {
   const [showSplash, setShowSplash] = useState(true);
@@ -19,12 +20,19 @@ const Index = () => {
       {showSplash && <SplashScreen onComplete={() => setShowSplash(false)} />}
       <Navbar />
       <Hero />
+      <SectionTransition />
       <About />
+      <SectionTransition />
       <Experience />
+      <SectionTransition />
       <Training />
+      <SectionTransition />
       <Skills />
+      <SectionTransition />
       <Projects />
+      <SectionTransition />
       <References />
+      <SectionTransition />
       <Contact />
       <Footer />
     </div>
