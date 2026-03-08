@@ -83,8 +83,8 @@ const AIChatDialog = ({ open, onClose }: Props) => {
     }
   }, [messages]);
 
-  const send = async () => {
-    const text = input.trim();
+  const send = async (override?: string) => {
+    const text = (override ?? input).trim();
     if (!text || loading) return;
     setInput('');
     setError('');
@@ -160,7 +160,7 @@ const AIChatDialog = ({ open, onClose }: Props) => {
                   ].map((chip) => (
                     <button
                       key={chip.label}
-                      onClick={() => { setInput(chip.query); }}
+                      onClick={() => send(chip.query)}
                       className="px-3 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-xs font-medium text-primary hover:bg-primary/20 transition-colors"
                     >
                       {chip.label}
