@@ -7,11 +7,11 @@ import Training from '@/components/portfolio/Training';
 import Skills from '@/components/portfolio/Skills';
 import Projects from '@/components/portfolio/Projects';
 import References from '@/components/portfolio/References';
-
 import Contact from '@/components/portfolio/Contact';
 import Footer from '@/components/portfolio/Footer';
 import SplashScreen from '@/components/portfolio/SplashScreen';
 import SectionTransition from '@/components/portfolio/SectionTransition';
+import SectionWrapper from '@/components/portfolio/SectionWrapper';
 import AIChatButton from '@/components/portfolio/AIChatButton';
 import WhatsAppButton from '@/components/portfolio/WhatsAppButton';
 import ScrollToTop from '@/components/portfolio/ScrollToTop';
@@ -25,19 +25,19 @@ const Index = () => {
       <Navbar />
       <Hero />
       <SectionTransition />
-      <About />
+      <SectionWrapper><About /></SectionWrapper>
       <SectionTransition />
-      <Experience />
+      <SectionWrapper><Experience /></SectionWrapper>
       <SectionTransition />
-      <Training />
+      <SectionWrapper><Training /></SectionWrapper>
       <SectionTransition />
-      <Skills />
+      <SectionWrapper><Skills /></SectionWrapper>
       <SectionTransition />
-      <Projects />
+      <SectionWrapper><Projects /></SectionWrapper>
       <SectionTransition />
-      <References />
+      <SectionWrapper><References /></SectionWrapper>
       <SectionTransition />
-      <Contact />
+      <SectionWrapper><Contact /></SectionWrapper>
       <Footer />
       <AIChatButton />
       <WhatsAppButton />
