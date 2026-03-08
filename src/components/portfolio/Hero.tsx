@@ -256,14 +256,14 @@ const Hero = () => {
 
               {/* Floating badges */}
               <motion.div
-                className="absolute -right-4 top-1/4 px-4 py-2 rounded-lg bg-card border border-border shadow-xl"
+                className="absolute -right-2 sm:-right-4 top-1/4 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-card border border-border shadow-xl"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 1.2 }}
                 whileHover={{ scale: 1.1 }}
               >
-                <div className="text-xs text-muted-foreground">Experience</div>
-                <div className="text-lg font-bold text-white">8+ Years</div>
+                <div className="text-[10px] sm:text-xs text-muted-foreground">Experience</div>
+                <div className="text-sm sm:text-lg font-bold text-foreground">8+ Years</div>
               </motion.div>
               
               <motion.div
