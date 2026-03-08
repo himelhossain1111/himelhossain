@@ -14,6 +14,7 @@ import SplashScreen from '@/components/portfolio/SplashScreen';
 import SectionTransition from '@/components/portfolio/SectionTransition';
 import AIChatButton from '@/components/portfolio/AIChatButton';
 import WhatsAppButton from '@/components/portfolio/WhatsAppButton';
+import ScrollToTop from '@/components/portfolio/ScrollToTop';
 
 const Index = () => {
   const [showSplash, setShowSplash] = useState(true);
@@ -42,6 +43,7 @@ const Index = () => {
       <Footer />
       <AIChatButton />
       <WhatsAppButton />
+      <ScrollToTop />
     </div>
   );
 };
