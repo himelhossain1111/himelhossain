@@ -148,7 +148,6 @@
 
   .section-heading {
     @apply text-3xl md:text-5xl font-bold mb-2;
-    text-shadow: 0 0 40px hsl(174 72% 56% / 0.3);
   }
 
   .section-subheading {
