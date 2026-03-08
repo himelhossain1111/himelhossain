@@ -11,6 +11,7 @@ import Contact from '@/components/portfolio/Contact';
 import Footer from '@/components/portfolio/Footer';
 import SplashScreen from '@/components/portfolio/SplashScreen';
 import SectionTransition from '@/components/portfolio/SectionTransition';
+import AIChatButton from '@/components/portfolio/AIChatButton';
 
 const Index = () => {
   const [showSplash, setShowSplash] = useState(true);
