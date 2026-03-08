@@ -11,7 +11,6 @@ import Contact from '@/components/portfolio/Contact';
 import Footer from '@/components/portfolio/Footer';
 import SplashScreen from '@/components/portfolio/SplashScreen';
 import SectionTransition from '@/components/portfolio/SectionTransition';
-import SectionWrapper from '@/components/portfolio/SectionWrapper';
 import AIChatButton from '@/components/portfolio/AIChatButton';
 import WhatsAppButton from '@/components/portfolio/WhatsAppButton';
 import ScrollToTop from '@/components/portfolio/ScrollToTop';
@@ -25,19 +24,19 @@ const Index = () => {
       <Navbar />
       <Hero />
       <SectionTransition />
-      <SectionWrapper><About /></SectionWrapper>
+      <About />
       <SectionTransition />
-      <SectionWrapper><Experience /></SectionWrapper>
+      <Experience />
       <SectionTransition />
-      <SectionWrapper><Training /></SectionWrapper>
+      <Training />
       <SectionTransition />
-      <SectionWrapper><Skills /></SectionWrapper>
+      <Skills />
       <SectionTransition />
-      <SectionWrapper><Projects /></SectionWrapper>
+      <Projects />
       <SectionTransition />
-      <SectionWrapper><References /></SectionWrapper>
+      <References />
       <SectionTransition />
-      <SectionWrapper><Contact /></SectionWrapper>
+      <Contact />
       <Footer />
       <AIChatButton />
       <WhatsAppButton />
