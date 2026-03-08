@@ -34,12 +34,6 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleTheme = () => {
-    const newIsDark = !isDark;
-    setIsDark(newIsDark);
-    document.documentElement.classList.toggle('light', !newIsDark);
-  };
-
   return (
     <motion.nav
       initial={{ y: -100 }}
