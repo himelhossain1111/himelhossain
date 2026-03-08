@@ -10,7 +10,6 @@ const testimonials = [
     quote:
       'Himel has been an invaluable asset to our store operations. His meticulous approach to inventory management and ERP systems has significantly reduced discrepancies and improved our supply chain efficiency.',
     rating: 5,
-    image: rashidulImg,
   },
   {
     name: 'Nashim Alam',
@@ -19,7 +18,6 @@ const testimonials = [
     quote:
       'I have known Himel as a dedicated and hardworking individual. His ability to balance professional responsibilities with continuous learning is truly commendable. He brings sincerity to everything he does.',
     rating: 5,
-    image: nashimImg,
   },
   {
     name: 'Farhana Akter',
@@ -28,7 +26,6 @@ const testimonials = [
     quote:
       'Working with Himel has been a great experience. He is incredibly organized, always on top of documentation, and his coordination between procurement and logistics teams is seamless.',
     rating: 5,
-    image: farhanaImg,
   },
   {
     name: 'Hero Mahmudul Hasan',
@@ -37,7 +34,6 @@ const testimonials = [
     quote:
       'Himel is a person of strong character and determination. His problem-solving skills and leadership qualities make him stand out. I highly recommend him for any professional endeavor.',
     rating: 5,
-    image: heroImg,
   },
 ];
 
