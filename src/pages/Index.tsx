@@ -43,6 +43,7 @@ const Index = () => {
       <Footer />
       <AIChatButton />
       <WhatsAppButton />
+      <ScrollToTop />
     </div>
   );
 };
