@@ -106,7 +106,7 @@ const Hero = () => {
             >
               <GlitchText text="Md. Himel" className="gradient-text" />
               <br />
-              <span style={{ color: titleColor }}>Hossain</span>
+              <span style={{ color: '#ffffff' }}>Hossain</span>
             </motion.h1>
 
             <motion.div
