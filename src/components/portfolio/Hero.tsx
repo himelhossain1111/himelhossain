@@ -14,7 +14,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 sm:px-0">
       {/* Particle Field Background */}
       <ParticleField />
       
@@ -65,7 +65,7 @@ const Hero = () => {
         <Code2 size={50} />
       </motion.div>
 
-      <div className="container mx-auto px-6 pt-20 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 pt-20 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Text Content */}
           <motion.div
@@ -98,7 +98,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold mb-4"
+              className="font-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4"
             >
               <GlitchText text="Md. Himel" className="gradient-text" />
               <br />
@@ -236,7 +236,7 @@ const Hero = () => {
               
               {/* Image container with hexagon-ish frame */}
               <motion.div 
-                className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden"
+                className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden"
                 style={{
                   boxShadow: '0 0 60px hsl(174 72% 56% / 0.4), inset 0 0 60px hsl(174 72% 56% / 0.1)',
                   border: '3px solid hsl(174 72% 56% / 0.5)',
@@ -256,25 +256,25 @@ const Hero = () => {
 
               {/* Floating badges */}
               <motion.div
-                className="absolute -right-4 top-1/4 px-4 py-2 rounded-lg bg-card border border-border shadow-xl"
+                className="absolute -right-2 sm:-right-4 top-1/4 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-card border border-border shadow-xl"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 1.2 }}
                 whileHover={{ scale: 1.1 }}
               >
-                <div className="text-xs text-muted-foreground">Experience</div>
-                <div className="text-lg font-bold text-white">8+ Years</div>
+                <div className="text-[10px] sm:text-xs text-muted-foreground">Experience</div>
+                <div className="text-sm sm:text-lg font-bold text-foreground">8+ Years</div>
               </motion.div>
               
               <motion.div
-                className="absolute -left-4 bottom-1/4 px-4 py-2 rounded-lg bg-card border border-border shadow-xl"
+                className="absolute -left-2 sm:-left-4 bottom-1/4 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-card border border-border shadow-xl"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 1.4 }}
                 whileHover={{ scale: 1.1 }}
               >
-                <div className="text-xs text-muted-foreground">Team Experience</div>
-                <div className="text-lg font-bold text-white">10+</div>
+                <div className="text-[10px] sm:text-xs text-muted-foreground">Team Experience</div>
+                <div className="text-sm sm:text-lg font-bold text-foreground">10+</div>
               </motion.div>
             </div>
           </motion.div>

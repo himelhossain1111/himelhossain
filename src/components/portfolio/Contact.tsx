@@ -6,7 +6,7 @@ import PinterestIcon from './PinterestIcon';
 
 const Contact = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: '-50px' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -32,7 +32,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-32 relative overflow-hidden">
+    <section id="contact" className="py-16 sm:py-24 lg:py-32 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 tech-grid opacity-20" />
       <motion.div 
@@ -41,7 +41,7 @@ const Contact = () => {
         transition={{ duration: 10, repeat: Infinity }}
       />
 
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}

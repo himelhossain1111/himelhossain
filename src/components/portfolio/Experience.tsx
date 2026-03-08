@@ -40,10 +40,10 @@ const education = [
 
 const Experience = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: '-50px' });
 
   return (
-    <section id="experience" className="py-32 relative overflow-hidden bg-card/30">
+    <section id="experience" className="py-16 sm:py-24 lg:py-32 relative overflow-hidden bg-card/30">
       {/* Background */}
       <div className="absolute inset-0 tech-grid opacity-20" />
       <motion.div 
@@ -52,7 +52,7 @@ const Experience = () => {
         transition={{ duration: 10, repeat: Infinity }}
       />
 
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}

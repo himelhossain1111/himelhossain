@@ -29,10 +29,10 @@ const trainings = [
 
 const Training = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: '-50px' });
 
   return (
-    <section id="training" className="py-32 relative overflow-hidden">
+    <section id="training" className="py-16 sm:py-24 lg:py-32 relative overflow-hidden">
       <div className="absolute inset-0 tech-grid opacity-20" />
       <motion.div
         className="absolute top-1/3 right-0 w-[400px] h-[400px] bg-glow-purple/10 rounded-full blur-[120px]"
@@ -40,7 +40,7 @@ const Training = () => {
         transition={{ duration: 10, repeat: Infinity }}
       />
 
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}

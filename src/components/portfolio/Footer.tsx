@@ -39,7 +39,7 @@ const Footer = () => {
       {/* Decorative top border */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           {/* Brand */}
           <motion.div
