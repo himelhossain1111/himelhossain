@@ -35,7 +35,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-32 relative overflow-hidden">
+    <section id="about" className="py-16 sm:py-24 lg:py-32 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 tech-grid opacity-20" />
       <motion.div 
