@@ -148,9 +148,25 @@ const AIChatDialog = ({ open, onClose }: Props) => {
           {/* Messages */}
           <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 space-y-4">
             {messages.length === 0 && (
-              <div className="text-center py-8 text-muted-foreground text-sm space-y-2">
+              <div className="text-center py-8 text-muted-foreground text-sm space-y-4">
                 <Bot className="w-10 h-10 mx-auto text-primary/50" />
                 <p>Hi! Ask me anything about Himel's experience, skills, or background.</p>
+                <div className="flex flex-wrap justify-center gap-2">
+                  {[
+                    { label: '💼 Experience', query: "Tell me about Himel's work experience" },
+                    { label: '🛠 Skills', query: "What are Himel's technical skills?" },
+                    { label: '📞 Contact', query: "How can I contact Himel?" },
+                    { label: '🎓 Education', query: "What is Himel's educational background?" },
+                  ].map((chip) => (
+                    <button
+                      key={chip.label}
+                      onClick={() => { setInput(chip.query); }}
+                      className="px-3 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-xs font-medium text-primary hover:bg-primary/20 transition-colors"
+                    >
+                      {chip.label}
+                    </button>
+                  ))}
+                </div>
               </div>
             )}
             {messages.map((m, i) => (
