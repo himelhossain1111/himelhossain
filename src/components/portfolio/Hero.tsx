@@ -14,7 +14,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 sm:px-0">
       {/* Particle Field Background */}
       <ParticleField />
       
