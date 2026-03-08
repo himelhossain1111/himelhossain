@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useMemo } from 'react';
 import { Package, TrendingUp, Users, FileCheck, ArrowUpRight, Sparkles } from 'lucide-react';
+import { useRandomTitleColor } from '@/lib/randomColor';
 
 const projects = [
   {
