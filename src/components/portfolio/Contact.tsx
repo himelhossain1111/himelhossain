@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useRef, useState, useMemo } from 'react';
 import { Mail, Phone, MapPin, Send, Linkedin, Facebook, CheckCircle2, Loader2, Sparkles, Github } from 'lucide-react';
 import PinterestIcon from './PinterestIcon';
+import { useRandomTitleColor } from '@/lib/randomColor';
 
 const Contact = () => {
   const ref = useRef(null);
