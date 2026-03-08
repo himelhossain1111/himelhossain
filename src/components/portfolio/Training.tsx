@@ -57,7 +57,7 @@ const Training = () => {
             &lt;Training /&gt;
           </motion.span>
           <h2 className="section-heading">
-            Training <span className="gradient-text neon-text">Summary</span>
+            Training <span style={{ color: titleColor }}>Summary</span>
           </h2>
           <p className="section-subheading">Professional development and certifications</p>
         </motion.div>

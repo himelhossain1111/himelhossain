@@ -46,6 +46,7 @@ const projects = [
 const Projects = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
+  const titleColor = useMemo(() => useRandomTitleColor('projects'), []);
 
   return (
     <section id="projects" className="py-16 sm:py-24 lg:py-32 relative overflow-hidden bg-card/30">
