@@ -29,7 +29,7 @@ const Skills = () => {
   const isInView = useInView(ref, { once: true, margin: '-50px' });
 
   return (
-    <section id="skills" className="py-32 relative overflow-hidden">
+    <section id="skills" className="py-16 sm:py-24 lg:py-32 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 tech-grid opacity-20" />
       <motion.div 
