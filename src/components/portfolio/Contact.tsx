@@ -10,6 +10,7 @@ const Contact = () => {
   const isInView = useInView(ref, { once: true, margin: '-50px' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const titleColor = useMemo(() => useRandomTitleColor('contact'), []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
