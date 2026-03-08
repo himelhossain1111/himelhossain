@@ -44,7 +44,7 @@ const projects = [
 
 const Projects = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: '-50px' });
 
   return (
     <section id="projects" className="py-32 relative overflow-hidden bg-card/30">
