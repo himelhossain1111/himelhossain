@@ -169,49 +169,88 @@ const AIChatDialog = ({ open, onClose }: Props) => {
                 </div>
               </div>
             )}
-            {messages.map((m, i) => (
-              <div key={i} className={`flex gap-2 ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                {m.role === 'assistant' && (
-                  <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-1">
-                    <Bot className="w-3 h-3 text-primary" />
-                  </div>
-                )}
-                <div
-                  className={`max-w-[80%] rounded-xl px-3 py-2 text-sm ${
-                    m.role === 'user'
-                      ? 'bg-primary text-primary-foreground'
-                      : 'bg-secondary text-foreground'
-                  }`}
+            <AnimatePresence initial={false}>
+              {messages.map((m, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ duration: 0.3, ease: 'easeOut' }}
+                  className={`flex gap-2 ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
-                  {m.role === 'assistant' ? (
-                    <div className="prose prose-sm prose-invert max-w-none [&_p]:m-0 [&_ul]:my-1 [&_ol]:my-1">
-                      <ReactMarkdown>{m.content}</ReactMarkdown>
-                    </div>
-                  ) : (
-                    m.content
+                  {m.role === 'assistant' && (
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ type: 'spring', stiffness: 500, damping: 25 }}
+                      className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-1"
+                    >
+                      <Bot className="w-3 h-3 text-primary" />
+                    </motion.div>
                   )}
-                </div>
-                {m.role === 'user' && (
-                  <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center shrink-0 mt-1">
-                    <User className="w-3 h-3 text-primary-foreground" />
+                  <motion.div
+                    initial={{ opacity: 0, x: m.role === 'user' ? 15 : -15 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.25, delay: 0.05 }}
+                    className={`max-w-[80%] rounded-xl px-3 py-2 text-sm ${
+                      m.role === 'user'
+                        ? 'bg-primary text-primary-foreground'
+                        : 'bg-secondary text-foreground'
+                    }`}
+                  >
+                    {m.role === 'assistant' ? (
+                      <div className="prose prose-sm prose-invert max-w-none [&_p]:m-0 [&_ul]:my-1 [&_ol]:my-1">
+                        <ReactMarkdown>{m.content}</ReactMarkdown>
+                      </div>
+                    ) : (
+                      m.content
+                    )}
+                  </motion.div>
+                  {m.role === 'user' && (
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ type: 'spring', stiffness: 500, damping: 25 }}
+                      className="w-6 h-6 rounded-full bg-primary flex items-center justify-center shrink-0 mt-1"
+                    >
+                      <User className="w-3 h-3 text-primary-foreground" />
+                    </motion.div>
+                  )}
+                </motion.div>
+              ))}
+            </AnimatePresence>
+            <AnimatePresence>
+              {loading && messages[messages.length - 1]?.role !== 'assistant' && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -5 }}
+                  transition={{ duration: 0.2 }}
+                  className="flex gap-2"
+                >
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ type: 'spring', stiffness: 500, damping: 25 }}
+                    className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0"
+                  >
+                    <Bot className="w-3 h-3 text-primary" />
+                  </motion.div>
+                  <div className="bg-secondary rounded-xl px-4 py-3">
+                    <div className="flex gap-1.5 items-center">
+                      {[0, 1, 2].map((i) => (
+                        <motion.span
+                          key={i}
+                          className="w-2 h-2 rounded-full bg-primary/60"
+                          animate={{ y: [0, -6, 0], opacity: [0.4, 1, 0.4] }}
+                          transition={{ duration: 0.8, repeat: Infinity, delay: i * 0.15, ease: 'easeInOut' }}
+                        />
+                      ))}
+                    </div>
                   </div>
-                )}
-              </div>
-            ))}
-            {loading && messages[messages.length - 1]?.role !== 'assistant' && (
-              <div className="flex gap-2">
-                <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                  <Bot className="w-3 h-3 text-primary" />
-                </div>
-                <div className="bg-secondary rounded-xl px-3 py-2">
-                  <div className="flex gap-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground animate-bounce" style={{ animationDelay: '0ms' }} />
-                    <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground animate-bounce" style={{ animationDelay: '150ms' }} />
-                    <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground animate-bounce" style={{ animationDelay: '300ms' }} />
-                  </div>
-                </div>
-              </div>
-            )}
+                </motion.div>
+              )}
+            </AnimatePresence>
             {error && (
               <p className="text-xs text-destructive text-center">{error}</p>
             )}
