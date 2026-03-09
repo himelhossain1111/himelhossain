@@ -134,21 +134,18 @@ const Hero = () => {
                 { value: '8+', label: 'Years Exp.' },
                 { value: '10+', label: 'Team Experience' },
                 { value: '90%', label: 'Accuracy' },
-              ].map((stat, index) => {
-                const statColor = useMemo(() => useRandomTitleColor(`hero-stat-${index}`), []);
-                return (
-                  <motion.div
-                    key={stat.label}
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ delay: 0.6 + index * 0.1, type: 'spring' }}
-                    className="text-center"
-                  >
-                    <div className="text-2xl font-bold" style={{ color: statColor }}>{stat.value}</div>
-                    <div className="text-xs text-muted-foreground uppercase tracking-wider">{stat.label}</div>
-                  </motion.div>
-                );
-              })}
+              ].map((stat, index) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ delay: 0.6 + index * 0.1, type: 'spring' }}
+                  className="text-center"
+                >
+                  <div className="text-2xl font-bold" style={{ color: heroStatColors[index] }}>{stat.value}</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider">{stat.label}</div>
+                </motion.div>
+              ))}
             </motion.div>
 
             <motion.div
