@@ -16,6 +16,11 @@ const Hero = () => {
   ];
   
   const titleColor = useMemo(() => useRandomTitleColor('hero'), []);
+  const heroStatColors = useMemo(() => [
+    useRandomTitleColor('hero-stat-0'),
+    useRandomTitleColor('hero-stat-1'),
+    useRandomTitleColor('hero-stat-2'),
+  ], []);
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 sm:px-0">
