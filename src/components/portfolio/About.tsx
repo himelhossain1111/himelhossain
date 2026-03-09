@@ -105,31 +105,35 @@ const About = () => {
               </motion.div>
 
               {/* Stats Grid */}
-              <div className="grid grid-cols-3 gap-4">
-                {stats.map((stat, index) => (
-                  <motion.div
-                    key={stat.label}
-                    className="glass-card rounded-xl p-4 text-center relative overflow-hidden group"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ delay: 0.4 + index * 0.1, type: 'spring' }}
-                    whileHover={{ scale: 1.05, y: -5 }}
-                  >
-                    <motion.div 
-                      className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
-                    />
-                    <motion.div 
-                      className="text-3xl font-bold gradient-text mb-1"
-                      initial={{ scale: 0 }}
-                      animate={isInView ? { scale: 1 } : {}}
-                      transition={{ delay: 0.5 + index * 0.1, type: 'spring' }}
-                    >
-                      {stat.value}
-                    </motion.div>
-                    <div className="text-xs text-muted-foreground">{stat.label}</div>
-                  </motion.div>
-                ))}
-              </div>
+               <div className="grid grid-cols-3 gap-4">
+                 {stats.map((stat, index) => {
+                   const statColor = useMemo(() => useRandomTitleColor(`stat-${index}`), [index]);
+                   return (
+                     <motion.div
+                       key={stat.label}
+                       className="glass-card rounded-xl p-4 text-center relative overflow-hidden group"
+                       initial={{ opacity: 0, scale: 0.8 }}
+                       animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                       transition={{ delay: 0.4 + index * 0.1, type: 'spring' }}
+                       whileHover={{ scale: 1.05, y: -5 }}
+                     >
+                       <motion.div 
+                         className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
+                       />
+                       <motion.div 
+                         className="text-4xl font-bold mb-1"
+                         style={{ color: statColor }}
+                         initial={{ scale: 0 }}
+                         animate={isInView ? { scale: 1 } : {}}
+                         transition={{ delay: 0.5 + index * 0.1, type: 'spring' }}
+                       >
+                         {stat.value}
+                       </motion.div>
+                       <div className="text-xs text-muted-foreground">{stat.label}</div>
+                     </motion.div>
+                   );
+                 })}
+               </div>
 
               {/* Tech Stack */}
               <motion.div className="flex flex-wrap gap-3" variants={itemVariants}>
