@@ -16,6 +16,11 @@ const Hero = () => {
   ];
   
   const titleColor = useMemo(() => useRandomTitleColor('hero'), []);
+  const heroStatColors = useMemo(() => [
+    useRandomTitleColor('hero-stat-0'),
+    useRandomTitleColor('hero-stat-1'),
+    useRandomTitleColor('hero-stat-2'),
+  ], []);
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 sm:px-0">
@@ -137,7 +142,7 @@ const Hero = () => {
                   transition={{ delay: 0.6 + index * 0.1, type: 'spring' }}
                   className="text-center"
                 >
-                  <div className="text-2xl font-bold gradient-text">{stat.value}</div>
+                  <div className="text-2xl font-bold" style={{ color: heroStatColors[index] }}>{stat.value}</div>
                   <div className="text-xs text-muted-foreground uppercase tracking-wider">{stat.label}</div>
                 </motion.div>
               ))}
