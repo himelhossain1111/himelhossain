@@ -49,6 +49,8 @@ const SYSTEM_PROMPT = `You are Himel's AI portfolio assistant. Answer questions 
 Be friendly, concise, and helpful. If asked something outside Himel's portfolio, politely redirect. Use markdown formatting.`;
 
 serve(async (req) => {
+  const corsHeaders = getCorsHeaders(req);
+
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
